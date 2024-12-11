@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-lg font-bold mb-4">Students</h2>
+<ul>
+    {% for student in students %}
+    <li class="mb-2">
+        <strong>{{ student['name'] }}</strong> - Age: {{ student['age'] }}
+        <form action="/delete-student/{{ student.id }}" method="post" class="inline">
+            <button type="submit" class="text-red-600">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3 class="text-lg font-bold mt-8">Add a New Student</h3>
+<form action="/add-student/" method="post" class="mt-4">
+    <input type="text" name="name" placeholder="Name" class="border px-2 py-1">
+    <input type="number" name="age" placeholder="Age" class="border px-2 py-1">
+    <button type="submit" class="bg-blue-600 text-white px-4 py-1">Add</button>
+</form>
+{% endblock %}
+``
