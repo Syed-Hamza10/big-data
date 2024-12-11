@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="bg-blue-600 text-white py-4">
+        <div class="container mx-auto flex justify-between">
+            <a href="/" class="text-lg font-semibold">Student Management</a>
+            <div>
+                <a href="/students/" class="px-3">Students</a>
+                <a href="/add-student/" class="px-3">Add Student</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container mx-auto my-8">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
